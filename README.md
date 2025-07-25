@@ -26,10 +26,16 @@ Welcome to the **Stack CLI**, a fun and interactive command-line stack implement
 
 ## 🛠️ Build Instructions
 
-Make sure you have a C compiler (like `gcc`) installed.
+Make sure you have a C compiler and makefile tools from gnu.
 
 ```bash
-gcc main.c stack.c -o stack-cli
+make
+make run
+```
+
+When you want to delete the executable file run:
+```bash 
+make clean
 ```
 
 > ✅ You must have all three files: `main.c`, `stack.c`, and `stack.h`
