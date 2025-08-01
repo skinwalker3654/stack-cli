@@ -95,6 +95,14 @@ int main(void) {
             } else {
                 system("clear");
             }
+        } else if(strcmp(command,"reverse")==0) {
+            if(persed != 1) {
+                printf("Error: Invalid arguments passed\n");
+                continue;
+            } else {
+                reverse(&s);
+                printf("Stack is reversed\n");
+            }
         } else if(strcmp(command,"exit")==0) {
             if(persed != 1) {
                 printf("Error: Invalid arguments passed\n");
