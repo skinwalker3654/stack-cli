@@ -17,6 +17,7 @@ Welcome to the **Stack CLI**, a fun and interactive command-line stack implement
   - `count`
   - `swap`
   - `sort`
+  - `reverse`
   - `print`
   - `cls` (clears terminal)
   - `help` (shows command list)
