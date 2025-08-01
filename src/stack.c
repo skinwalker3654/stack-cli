@@ -122,6 +122,19 @@ void find(Stack *s, int value) {
     }
 }
 
+void reverse(Stack *s) {
+    if(s->top == -1) {
+        printf("Stack is empty\n");
+        return;
+    }
+
+    for(int i=0; i<=(s->top/2); i++) {
+        int temp = s->data[i];
+        s->data[i] = s->data[s->top-i];
+        s->data[s->top-i] = temp;
+    }
+}
+
 void print_commands() {
     printf("\nAvailable commands:\n");
     printf("  push <value>  - Push a value onto the stack\n");
@@ -130,6 +143,7 @@ void print_commands() {
     printf("  del  <value>  - Delete a value from the stack\n");
     printf("  count         - Show number of elements in stack\n");
     printf("  swap          - Swap the top elements\n");
+    printf("  reverse       - Reverse the stack elements\n");
     printf("  print         - Display stack contents\n");
     printf("  sort          - Sort the stack in ascending order\n");
     printf("  find <value>  - Search for a value in the stack\n");
