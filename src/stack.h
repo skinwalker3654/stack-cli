@@ -15,6 +15,7 @@ int pop(Stack *s);
 int peek(Stack *s);
 void print(Stack *s);
 void swap(Stack *s);
+void reverse(Stack *s);
 void sort(Stack *s, int start, int end);
 void delete_(Stack *s, int value);
 void find(Stack *s, int value);
