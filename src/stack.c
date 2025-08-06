@@ -63,7 +63,7 @@ void sort(Stack *s, int start, int end) {
     int i = start - 1;
 
     for(int j = start; j < end; j++) {
-        if (s->data[j] < pivot) {
+        if(s->data[j] < pivot) {
             i++;
             int tmp = s->data[i];
             s->data[i] = s->data[j];
@@ -88,18 +88,18 @@ void delete_(Stack *s, int value) {
 
     int index = -1;
     for(int i = 0; i <= s->top; i++) {
-        if (s->data[i] == value) {
+        if(s->data[i] == value) {
             index = i;
             break;
         }
     }
 
-    if (index == -1) {
+    if(index == -1) {
         printf("Value %d not found\n", value);
         return;
     }
 
-    for (int i = index; i < s->top; i++)
+    for(int i = index; i < s->top; i++)
         s->data[i] = s->data[i + 1];
     s->top--;
 }
@@ -112,7 +112,7 @@ void find(Stack *s, int value) {
 
     int index = -1;
     for(int i = 0; i <= s->top; i++)
-        if (s->data[i] == value)
+        if(s->data[i] == value)
             index = i;
 
     if(index == -1) {
