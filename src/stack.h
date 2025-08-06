@@ -20,5 +20,6 @@ void sort(Stack *s, int start, int end);
 void delete_(Stack *s, int value);
 void find(Stack *s, int value);
 void print_commands();
+int parser(int persed,int n);
 
 #endif
