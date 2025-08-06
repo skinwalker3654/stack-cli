@@ -23,101 +23,46 @@ int main(void) {
         int persed = sscanf(input,"%s %d",command,&value);
 
         if(strcmp(command,"push")==0) {
-            if(persed != 2) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
+            if(parser(persed,2)==1) {
                 push(&s,value);
                 printf("Value %d pushed into the stack\n",value);
             }
         } else if(strcmp(command,"del")==0) {
-            if(persed != 2) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
+            if(parser(persed,2)==1) {
                 delete_(&s,value);
                 printf("Value %d deleted from the stack\n",value);
             }
         } else if(strcmp(command,"find")==0) {
-            if(persed != 2) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
-                find(&s,value);
-            }
+            if(parser(persed,2)==1) {find(&s,value);}
         } else if(strcmp(command,"pop")==0) {
-            if(persed != 1) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
-                printf("Top element deleted: %d\n",pop(&s));
-            }
+            if(parser(persed,1)==1) {printf("Top element deleted: %d\n",pop(&s));}
         } else if(strcmp(command,"peek")==0) {
-            if(persed != 1) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
-                printf("Top element: %d\n",peek(&s));
-            }
+            if(parser(persed,1)==1) {printf("Top element: %d\n",peek(&s));}
         } else if(strcmp(command,"print")==0) {
-            if(persed != 1) {
-                printf("Invalid arguments passed\n");
-                continue;
-            } else {
-                print(&s);
-            }
+            if(parser(persed,1)==1) {print(&s);}
         } else if(strcmp(command,"count")==0) {
-            if(persed != 1) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
-                count(&s);
-            }
+            if(parser(persed,1)==1) {count(&s);}
         } else if(strcmp(command,"swap")==0) {
-            if(persed != 1) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
-                swap(&s);
-            }
+            if(parser(persed,1)==1) {swap(&s);}
         } else if(strcmp(command,"sort")==0) {
-            if(persed != 1) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
+            if(parser(persed,1)==1) {
                 sort(&s,0,s.top);
                 printf("Stack is sorted\n");
             }
         } else if(strcmp(command,"cls")==0) {
-            if(persed != 1) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
-                system("clear");
-            }
+            if(parser(persed,1)==1) {system("clear");}
         } else if(strcmp(command,"reverse")==0) {
-            if(persed != 1) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
+            if(parser(persed,1)==1) {
                 reverse(&s);
                 printf("Stack is reversed\n");
             }
         } else if(strcmp(command,"exit")==0) {
-            if(persed != 1) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
+            if(parser(persed,1)==1) {
                 printf("Exiting The Program...\n");
                 return 0;
             }
         } else if(strcmp(command,"help")==0) {
-            if(persed != 1) {
-                printf("Error: Invalid arguments passed\n");
-                continue;
-            } else {
-                print_commands();
-            }
+            if(parser(persed,1)==1) {print_commands();}
         } else {
             printf("Error invalid command: '%s'\n",command);
             printf("Type: 'help'to see the invalid commands\n");
