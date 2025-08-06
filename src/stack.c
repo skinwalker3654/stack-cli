@@ -7,7 +7,7 @@ void count(Stack *s) { printf("Elements count: %d\n", s->top + 1); }
 void init(Stack *s) { s->top = -1; }
 
 void push(Stack *s, int value) {
-    if (s->top >= max_nums - 1) {
+    if(s->top >= max_nums - 1) {
         printf("Stack overflow\n");
         return;
     } else {
@@ -16,7 +16,7 @@ void push(Stack *s, int value) {
 }
 
 int pop(Stack *s) {
-    if (s->top == -1) {
+    if(s->top == -1) {
         printf("Stack underflow\n");
         exit(EXIT_FAILURE);
     } else {
@@ -25,7 +25,7 @@ int pop(Stack *s) {
 }
 
 int peek(Stack *s) {
-    if (s->top == -1) {
+    if(s->top == -1) {
         printf("Stack underflow\n");
         exit(EXIT_FAILURE);
     } else {
@@ -34,7 +34,7 @@ int peek(Stack *s) {
 }
 
 void print(Stack *s) {
-    if (s->top == -1) {
+    if(s->top == -1) {
         printf("Stack is empty\n");
         return;
     } else {
@@ -45,7 +45,7 @@ void print(Stack *s) {
 }
 
 void swap(Stack *s) {
-    if (s->top == -1) {
+    if(s->top == -1) {
         printf("Stack underflow\n");
         return;
     } else {
@@ -58,11 +58,11 @@ void swap(Stack *s) {
 }
 
 void sort(Stack *s, int start, int end) {
-    if (start >= end) return;
+    if(start >= end) return;
     int pivot = s->data[end];
     int i = start - 1;
 
-    for (int j = start; j < end; j++) {
+    for(int j = start; j < end; j++) {
         if (s->data[j] < pivot) {
             i++;
             int tmp = s->data[i];
@@ -81,13 +81,13 @@ void sort(Stack *s, int start, int end) {
 }
 
 void delete_(Stack *s, int value) {
-    if (s->top == -1) {
+    if(s->top == -1) {
         printf("Stack is empty\n");
         return;
     }
 
     int index = -1;
-    for (int i = 0; i <= s->top; i++) {
+    for(int i = 0; i <= s->top; i++) {
         if (s->data[i] == value) {
             index = i;
             break;
@@ -105,17 +105,17 @@ void delete_(Stack *s, int value) {
 }
 
 void find(Stack *s, int value) {
-    if (s->top == -1) {
+    if(s->top == -1) {
         printf("Stack is empty\n");
         return;
     }
 
     int index = -1;
-    for (int i = 0; i <= s->top; i++)
+    for(int i = 0; i <= s->top; i++)
         if (s->data[i] == value)
             index = i;
 
-    if (index == -1) {
+    if(index == -1) {
         printf("Value %d not found!\n", value);
     } else {
         printf("Value %d found at index: %d\n", value, index);
@@ -133,6 +133,12 @@ void reverse(Stack *s) {
         s->data[i] = s->data[s->top-i];
         s->data[s->top-i] = temp;
     }
+}
+
+int parser(int persed,int n) {
+    if(persed == n) {return 1;}
+    printf("Error: Invalid arguments passed\n");
+    return 0;
 }
 
 void print_commands() {
