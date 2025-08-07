@@ -44,9 +44,8 @@ void print(Stack *stack) {
     }
     
     printf("bottom->top: ");
-    for(int i = 0; i <= stack->top_index; i++) {
+    for(int i = 0; i <= stack->top_index; i++) 
         printf("%d ", stack->elements[i]);
-    }
     printf("\n");
 }
 
@@ -108,9 +107,8 @@ void delete_(Stack *stack, int value) {
         return;
     }
 
-    for(int i = found_index; i < stack->top_index; i++) {
+    for(int i = found_index; i < stack->top_index; i++) 
         stack->elements[i] = stack->elements[i + 1];
-    }
     stack->top_index--;
 }
 
