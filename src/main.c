@@ -57,13 +57,13 @@ int main() {
         else if(strcmp(command, "sort") == 0) {
             if(validate_arguments(args_parsed, 1)) {
                 sort(&my_stack, 0, my_stack.top_index);
-                printf("Stack sorted\n");
+                printf("Stack is now sorted\n");
             }
         }
         else if(strcmp(command, "reverse") == 0) {
             if(validate_arguments(args_parsed, 1)) {
                 reverse(&my_stack);
-                printf("Stack reversed\n");
+                printf("Stack is now reversed\n");
             }
         }
         else if(strcmp(command, "del") == 0) {
