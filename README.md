@@ -48,7 +48,7 @@ make clean
 Run it in your terminal:
 
 ```bash
-./stack-cli
+./bin/main
 ```
 
 Once inside, try commands like:
