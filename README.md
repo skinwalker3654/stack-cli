@@ -77,6 +77,9 @@ prompt@~> exit
 
 ```
 📂 stack-cli
+├── .github/
+|    └── CONTRIBUTING.md
+|
 ├── explanation/
 |    └── explain.txt
 |
@@ -85,7 +88,6 @@ prompt@~> exit
 |    ├── stack.c
 |    └── stack.h
 |
-├── CONTRIBUTING.md
 ├── README.md
 ├── Makefile
 └── LICENSE
