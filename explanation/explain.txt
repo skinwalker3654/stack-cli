@@ -23,12 +23,12 @@ commands:
 Here is an example of the 
 program running:
 
-prompt@~> push 10
-value 10 pushed into the stack
-prompt@~> push 30
-value 30 pushed into the stack
-prompt@~> print
-bottom->top: 10 30
-prompt@~> exit
-exiting...
+Prompt@~> push 10
+Value 10 pushed into the stack
+Prompt@~> push 30
+Value 30 pushed into the stack
+Prompt@~> print
+Bottom->Top: 10 30
+Prompt@~> exit
+Exiting...
 
