@@ -3,14 +3,17 @@
 #include <stdlib.h>
 #include "stack.h"
 
+//counts the elements
 void count_elements(Stack *stack) {
     printf("Elements count: %d\n", stack->top_index + 1);
 }
 
+//stack initializer
 void initialize(Stack *stack) {
     stack->top_index = -1;
 }
 
+//push values into the stack
 void push(Stack *stack, int value) {
     if(stack->top_index >= MAX_STACK_SIZE - 1) {
         printf("Stack overflow\n");
@@ -19,6 +22,7 @@ void push(Stack *stack, int value) {
     stack->elements[++stack->top_index] = value;
 }
 
+//pops values from the stack
 int pop(Stack *stack) {
     if(stack->top_index == -1) {
         printf("Stack underflow\n");
@@ -28,6 +32,7 @@ int pop(Stack *stack) {
     }
 }
 
+//peek value
 int peek(Stack *stack) {
     if(stack->top_index == -1) {
         printf("Stack underflow\n");
@@ -37,6 +42,7 @@ int peek(Stack *stack) {
     }
 }
 
+//prints the stack
 void print(Stack *stack) {
     if(stack->top_index == -1) {
         printf("Stack is empty\n");
@@ -49,6 +55,7 @@ void print(Stack *stack) {
     printf("\n");
 }
 
+//swaps the top elements
 void swap_top(Stack *stack) {
     if(stack->top_index < 1) {
         printf("Not enough elements to swap\n");
@@ -64,6 +71,7 @@ void swap_top(Stack *stack) {
            stack->elements[stack->top_index - 1]);
 }
 
+//sorts the stack by quicksort
 void sort(Stack *stack, int start, int end) {
     if(start >= end) return;
     int pivot = stack->elements[end];
@@ -87,6 +95,7 @@ void sort(Stack *stack, int start, int end) {
     sort(stack, pivot_index + 1, end);
 }
 
+//deletes values
 void delete_(Stack *stack, int value) {
     if(stack->top_index == -1) {
         printf("Stack is empty\n");
@@ -111,6 +120,7 @@ void delete_(Stack *stack, int value) {
     stack->top_index--;
 }
 
+//find the index of a value 0 based index
 void search(Stack *stack, int value) {
     if(stack->top_index == -1) {
         printf("Stack is empty\n");
@@ -131,6 +141,7 @@ void search(Stack *stack, int value) {
     }
 }
 
+//reverse the stack
 void reverse(Stack *stack) {
     if(stack->top_index == -1) {
         printf("Stack is empty\n");
@@ -144,12 +155,14 @@ void reverse(Stack *stack) {
     }
 }
 
+//checks if you added the amount of arguments required
 int IsValid_arg(int parsed, int args) {
     if(parsed == args) {return 1;}
     printf("Error: Invalid arguments\n");
     return 0;
 }
 
+//prints the commands
 void help_menu() {
     printf("\nAvailable commands:\n");
     printf("  push <value>  - Add value to stack\n");
