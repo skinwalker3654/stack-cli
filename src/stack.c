@@ -38,7 +38,8 @@ void print(Stack *s) {
         printf("Stack is empty\n");
         return;
     } else {
-        for (int i = 0; i <= s->top; i++)
+        printf("bottom->top: ");
+        for(int i = 0; i <= s->top; i++)
             printf("%d ", s->data[i]);
         printf("\n");
     }
