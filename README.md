@@ -57,7 +57,7 @@ Once inside, try commands like:
 prompt@~> push 5
 prompt@~> push 10
 prompt@~> peek
-prompt@> find 10
+prompt@~> find 10
 prompt@~> sort
 prompt@~> print
 prompt@~> pop
