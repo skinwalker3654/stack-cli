@@ -72,7 +72,7 @@ prompt@~> exit
 ```
 📂 stack-cli
 ├── explanation/
-|      └── explain.txt
+|    └── explain.txt
 |
 ├── src/
 |    ├── main.c
