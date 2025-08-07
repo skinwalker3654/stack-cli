@@ -3,158 +3,169 @@
 #include <stdlib.h>
 #include "stack.h"
 
-void count(Stack *s) { printf("Elements count: %d\n", s->top + 1); }
-void init(Stack *s) { s->top = -1; }
+void count_elements(Stack *stack) {
+    printf("Elements count: %d\n", stack->top_index + 1);
+}
 
-void push(Stack *s, int value) {
-    if(s->top >= max_nums - 1) {
+void initialize(Stack *stack) {
+    stack->top_index = -1;
+}
+
+void push(Stack *stack, int value) {
+    if(stack->top_index >= MAX_STACK_SIZE - 1) {
         printf("Stack overflow\n");
         return;
-    } else {
-        s->data[++s->top] = value;
     }
+    stack->elements[++stack->top_index] = value;
 }
 
-int pop(Stack *s) {
-    if(s->top == -1) {
+int pop(Stack *stack) {
+    if(stack->top_index == -1) {
         printf("Stack underflow\n");
         exit(EXIT_FAILURE);
-    } else {
-        return s->data[s->top--];
     }
+    return stack->elements[stack->top_index--];
 }
 
-int peek(Stack *s) {
-    if(s->top == -1) {
+int peek(Stack *stack) {
+    if(stack->top_index == -1) {
         printf("Stack underflow\n");
         exit(EXIT_FAILURE);
-    } else {
-        return s->data[s->top];
     }
+    return stack->elements[stack->top_index];
 }
 
-void print(Stack *s) {
-    if(s->top == -1) {
+void print(Stack *stack) {
+    if(stack->top_index == -1) {
         printf("Stack is empty\n");
         return;
-    } else {
-        printf("bottom->top: ");
-        for(int i = 0; i <= s->top; i++)
-            printf("%d ", s->data[i]);
-        printf("\n");
     }
+    
+    printf("bottom->top: ");
+    for(int i = 0; i <= stack->top_index; i++) {
+        printf("%d ", stack->elements[i]);
+    }
+    printf("\n");
 }
 
-void swap(Stack *s) {
-    if(s->top == -1) {
-        printf("Stack underflow\n");
+void swap_top(Stack *stack) {
+    if(stack->top_index < 1) {
+        printf("Not enough elements to swap\n");
         return;
-    } else {
-        int tmp = s->data[s->top];
-        s->data[s->top] = s->data[s->top - 1];
-        s->data[s->top - 1] = tmp;
     }
-
-    printf("Top: %d swapped with %d\n", s->data[s->top - 1], s->data[s->top]);
+    
+    int temp = stack->elements[stack->top_index];
+    stack->elements[stack->top_index] = stack->elements[stack->top_index - 1];
+    stack->elements[stack->top_index - 1] = temp;
+    
+    printf("Swapped: %d and %d\n", 
+           stack->elements[stack->top_index], 
+           stack->elements[stack->top_index - 1]);
 }
 
-void sort(Stack *s, int start, int end) {
+void sort(Stack *stack, int start, int end) {
     if(start >= end) return;
-    int pivot = s->data[end];
-    int i = start - 1;
+    
+    int pivot = stack->elements[end];
+    int partition_index = start - 1;
 
     for(int j = start; j < end; j++) {
-        if(s->data[j] < pivot) {
-            i++;
-            int tmp = s->data[i];
-            s->data[i] = s->data[j];
-            s->data[j] = tmp;
+        if(stack->elements[j] < pivot) {
+            partition_index++;
+            int temp = stack->elements[partition_index];
+            stack->elements[partition_index] = stack->elements[j];
+            stack->elements[j] = temp;
         }
     }
 
-    int tmp = s->data[i + 1];
-    s->data[i + 1] = s->data[end];
-    s->data[end] = tmp;
+    int temp = stack->elements[partition_index + 1];
+    stack->elements[partition_index + 1] = stack->elements[end];
+    stack->elements[end] = temp;
 
-    int pi = i + 1;
-    sort(s, start, pi - 1);
-    sort(s, pi + 1, end);
+    int pivot_index = partition_index + 1;
+    stack_sort(stack, start, pivot_index - 1);
+    stack_sort(stack, pivot_index + 1, end);
 }
 
-void delete_(Stack *s, int value) {
-    if(s->top == -1) {
+void delete(Stack *stack, int value) {
+    if(stack->top_index == -1) {
         printf("Stack is empty\n");
         return;
     }
 
-    int index = -1;
-    for(int i = 0; i <= s->top; i++) {
-        if(s->data[i] == value) {
-            index = i;
+    int found_index = -1;
+    for(int i = 0; i <= stack->top_index; i++) {
+        if(stack->elements[i] == value) {
+            found_index = i;
             break;
         }
     }
 
-    if(index == -1) {
+    if(found_index == -1) {
         printf("Value %d not found\n", value);
         return;
     }
 
-    for(int i = index; i < s->top; i++)
-        s->data[i] = s->data[i + 1];
-    s->top--;
+    for(int i = found_index; i < stack->top_index; i++) {
+        stack->elements[i] = stack->elements[i + 1];
+    }
+    stack->top_index--;
 }
 
-void find(Stack *s, int value) {
-    if(s->top == -1) {
+void search(Stack *stack, int value) {
+    if(stack->top_index == -1) {
         printf("Stack is empty\n");
         return;
     }
 
-    int index = -1;
-    for(int i = 0; i <= s->top; i++)
-        if(s->data[i] == value)
-            index = i;
+    int found_index = -1;
+    for(int i = 0; i <= stack->top_index; i++) {
+        if(stack->elements[i] == value) {
+            found_index = i;
+        }
+    }
 
-    if(index == -1) {
-        printf("Value %d not found!\n", value);
+    if(found_index == -1) {
+        printf("Value %d not found\n", value);
     } else {
-        printf("Value %d found at index: %d\n", value, index);
+        printf("Value %d found at index: %d\n", value, found_index);
     }
 }
 
-void reverse(Stack *s) {
-    if(s->top == -1) {
+void reverse(Stack *stack) {
+    if(stack->top_index == -1) {
         printf("Stack is empty\n");
         return;
     }
 
-    for(int i=0; i<=(s->top/2); i++) {
-        int temp = s->data[i];
-        s->data[i] = s->data[s->top-i];
-        s->data[s->top-i] = temp;
+    for(int i = 0; i <= stack->top_index / 2; i++) {
+        int temp = stack->elements[i];
+        stack->elements[i] = stack->elements[stack->top_index - i];
+        stack->elements[stack->top_index - i] = temp;
     }
 }
 
-int parser(int persed,int n) {
-    if(persed == n) {return 1;}
-    printf("Error: Invalid arguments passed\n");
+int validate_arguments(int parsed_args, int expected_args) {
+    if(parsed_args == expected_args) {
+        return 1;
+    }
+    printf("Error: Invalid arguments\n");
     return 0;
 }
 
-void print_commands() {
+void help_menu() {
     printf("\nAvailable commands:\n");
-    printf("  push <value>  - Push a value onto the stack\n");
-    printf("  pop           - Pop a value from the stack\n");
-    printf("  peek          - View the top value without popping\n");
-    printf("  del  <value>  - Delete a value from the stack\n");
-    printf("  count         - Show number of elements in stack\n");
-    printf("  swap          - Swap the top elements\n");
-    printf("  reverse       - Reverse the stack elements\n");
+    printf("  push <value>  - Add value to stack\n");
+    printf("  pop           - Remove top value\n");
+    printf("  peek          - View top value\n");
+    printf("  del <value>   - Delete specific value\n");
+    printf("  count         - Show element count\n");
+    printf("  swap          - Swap top two elements\n");
+    printf("  reverse       - Reverse stack order\n");
     printf("  print         - Display stack contents\n");
-    printf("  sort          - Sort the stack in ascending order\n");
-    printf("  find <value>  - Search for a value in the stack\n");
-    printf("  help          - Show this help message\n");
-    printf("  cls           - Clear the terminal\n");
-    printf("  exit          - Exit the program\n\n");
+    printf("  sort          - Sort stack\n");
+    printf("  find <value>  - Search for value\n");
+    printf("  help          - Show this menu\n");
+    printf("  cls           - Clear screen\n");
+    printf("  exit          - Quit program\n\n");
 }
