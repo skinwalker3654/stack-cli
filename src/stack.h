@@ -17,7 +17,7 @@ void print(Stack *stack);
 void swap_top(Stack *stack);
 void reverse(Stack *stack);
 void sort(Stack *stack, int start, int end);
-void delete(Stack *stack, int value);
+void delete_(Stack *stack, int value);
 void search(Stack *stack, int value);
 void help_menu(void);
 int validate_arguments(int parsed_args, int expected_args);
