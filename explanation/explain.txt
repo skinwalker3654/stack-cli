@@ -1,0 +1,34 @@
+This program is a stakc-cli tool
+that has the stack data structure
+in a cli form.
+
+it works with a prompt and 
+by running commands.
+
+commands:
+    push  <value>    #this command push values into the stack.
+    del   <value>    #this command deletes a value from the stack.
+    find  <value>    #this commands shows you the index of a value.
+    pop              #this command deletes the top element of the stack O(1).
+    peek             #this command prints the top element of the stack O(1).
+    print            #this command prints all the stack elements.
+    count            #this commands shows you the total elements.
+    swap             #this command swaps the top 2 elements.
+    reverse          #this command reverses the stack.
+    sort             #this command sorts the array by the quicksort algorithm. 
+    help             #this commands shows you all the commands.
+    cls              #this commands clears the terminal.
+    exit             #this commands is for exiting the program.
+
+Here is an example of the 
+program running:
+
+prompt@~> push 10
+value 10 pushed into the stack
+prompt@~> push 30
+value 30 pushed into the stack
+prompt@~> print
+bottom->top: 10 30
+prompt@~> exit
+exiting...
+
