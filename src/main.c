@@ -24,71 +24,71 @@ int main() {
         int args_parsed = sscanf(user_input, "%s %d", command, &value);
 
         if(strcmp(command, "push") == 0) {
-            if(validate_arguments(args_parsed, 2)) {
+            if(IsValid_arg(args_parsed, 2)) {
                 push(&my_stack, value);
                 printf("Pushed: %d\n", value);
             }
         }
         else if(strcmp(command, "pop") == 0) {
-            if(validate_arguments(args_parsed, 1)) {
+            if(IsValid_arg(args_parsed, 1)) {
                 printf("Popped: %d\n",pop(&my_stack));
             }
         }
         else if(strcmp(command, "peek") == 0) {
-            if(validate_arguments(args_parsed, 1)) {
+            if(IsValid_arg(args_parsed, 1)) {
                 printf("Top element: %d\n",peek(&my_stack));
             }
         }
         else if(strcmp(command, "print") == 0) {
-            if(validate_arguments(args_parsed, 1)) {
+            if(IsValid_arg(args_parsed, 1)) {
                 print(&my_stack);
             }
         }
         else if(strcmp(command, "count") == 0) {
-            if(validate_arguments(args_parsed, 1)) {
+            if(IsValid_arg(args_parsed, 1)) {
                 count_elements(&my_stack);
             }
         }
         else if(strcmp(command, "swap") == 0) {
-            if(validate_arguments(args_parsed, 1)) {
+            if(IsValid_arg(args_parsed, 1)) {
                 swap_top(&my_stack);
             }
         }
         else if(strcmp(command, "sort") == 0) {
-            if(validate_arguments(args_parsed, 1)) {
+            if(IsValid_arg(args_parsed, 1)) {
                 sort(&my_stack, 0, my_stack.top_index);
                 printf("Stack is now sorted\n");
             }
         }
         else if(strcmp(command, "reverse") == 0) {
-            if(validate_arguments(args_parsed, 1)) {
+            if(IsValid_arg(args_parsed, 1)) {
                 reverse(&my_stack);
                 printf("Stack is now reversed\n");
             }
         }
         else if(strcmp(command, "del") == 0) {
-            if(validate_arguments(args_parsed, 2)) {
+            if(IsValid_arg(args_parsed, 2)) {
                 delete_(&my_stack, value);
                 printf("Deleted: %d\n",value);
             }
         }
         else if(strcmp(command, "find") == 0) {
-            if(validate_arguments(args_parsed, 2)) {
+            if(IsValid_arg(args_parsed, 2)) {
                 search(&my_stack,value);
             }
         }
         else if(strcmp(command, "help") == 0) {
-            if(validate_arguments(args_parsed, 1)) {
+            if(IsValid_arg(args_parsed, 1)) {
                 help_menu();
             }
         }
         else if(strcmp(command, "cls") == 0) {
-            if(validate_arguments(args_parsed, 1)) {
+            if(IsValid_arg(args_parsed, 1)) {
                 system("clear"); 
             }
         }
         else if(strcmp(command, "exit") == 0) {
-            if(validate_arguments(args_parsed, 1)) {
+            if(IsValid_arg(args_parsed, 1)) {
                 printf("Exiting...\n"); 
                 break;
             }

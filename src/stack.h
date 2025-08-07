@@ -20,6 +20,6 @@ void sort(Stack *stack, int start, int end);
 void delete_(Stack *stack, int value);
 void search(Stack *stack, int value);
 void help_menu(void);
-int validate_arguments(int parsed_args, int expected_args);
+int IsValid_arg(int parsed, int args);
 
 #endif

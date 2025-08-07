@@ -145,10 +145,8 @@ void reverse(Stack *stack) {
     }
 }
 
-int validate_arguments(int parsed_args, int expected_args) {
-    if(parsed_args == expected_args) {
-        return 1;
-    }
+int IsValid_arg(int parsed, int args) {
+    if(parsed == args) {return 1;}
     printf("Error: Invalid arguments\n");
     return 0;
 }
