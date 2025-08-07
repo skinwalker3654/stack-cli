@@ -94,7 +94,7 @@ prompt@~> exit
 
 ## 📣 Notes
 
-- The stack is fixed-size (`max_nums = 100`) you can change the size by changing the #define MAX_STACK_SIZE 
+- The stack is fixed-size (`max_nums = 100`) you can change the size by changing the #define MAX_STACK_SIZE from the src/stack.h
 - Sorting uses quicksort
 - The `swap` command swaps the top 2 elements (if available)
 
