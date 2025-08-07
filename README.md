@@ -60,15 +60,15 @@ Run it in your terminal:
 Once inside, try commands like:
 
 ```bash
-prompt@~> push 5
-prompt@~> push 10
-prompt@~> peek
-prompt@~> find 10
-prompt@~> sort
-prompt@~> print
-prompt@~> pop
-prompt@~> help
-prompt@~> exit
+Prompt@~> push 5
+Prompt@~> push 10
+Prompt@~> peek
+Prompt@~> find 10
+Prompt@~> sort
+Prompt@~> print
+Prompt@~> pop
+Prompt@~> help
+Prompt@~> exit
 ```
 
 ---
