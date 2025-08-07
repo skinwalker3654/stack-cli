@@ -12,7 +12,7 @@ int main() {
     int value;
 
     while(1) {
-        printf("prompt@~> ");
+        printf("Prompt@~> ");
         if(fgets(user_input, sizeof(user_input), stdin) == NULL) {
             printf("Input error\n");
             continue;
