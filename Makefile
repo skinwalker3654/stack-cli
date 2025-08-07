@@ -18,6 +18,7 @@ $(TARGET): $(SRC_FILES)
 	@mkdir -p $(BIN_DIR)
 	$(CC) $^ -o $@
 
+#runs the program
 run: all
 	@echo "running the program..."
 	./$(TARGET)
