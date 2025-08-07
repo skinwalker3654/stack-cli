@@ -54,15 +54,15 @@ Run it in your terminal:
 Once inside, try commands like:
 
 ```bash
-prompt@> push 5
-prompt@> push 10
-prompt@> peek
+prompt@~> push 5
+prompt@~> push 10
+prompt@~> peek
 prompt@> find 10
-prompt@> sort
-prompt@> print
-prompt@> pop
-prompt@> help
-prompt@> exit
+prompt@~> sort
+prompt@~> print
+prompt@~> pop
+prompt@~> help
+prompt@~> exit
 ```
 
 ---
@@ -71,6 +71,9 @@ prompt@> exit
 
 ```
 📂 stack-cli
+├── explanation/
+|      └── explain.txt
+|
 ├── src/
 |    ├── main.c
 |    ├── stack.c
