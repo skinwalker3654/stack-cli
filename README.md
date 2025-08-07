@@ -29,6 +29,12 @@ Welcome to the **Stack CLI**, a fun and interactive command-line stack implement
 
 Make sure you have a C compiler and makefile tools from gnu.
 
+1. clone the reposetory
+```bash
+git clone git@github.com:skinwalker3654/stack-cli.git
+cd stack-cli
+```
+2. compile the program
 ```bash
 make
 make run
