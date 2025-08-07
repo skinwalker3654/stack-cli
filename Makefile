@@ -1,7 +1,7 @@
 #compiler
 CC = gcc
 
-#directorys
+#directories
 SRC_DIR = src
 BIN_DIR = bin
 
