@@ -5,7 +5,7 @@
 
 //counts the elements
 void count_elements(Stack *stack) {
-    printf("Elements count: %d\n", stack->top_index + 1);
+    printf(GREEN "Elements count: %d\n" RESET, stack->top_index + 1);
 }
 
 //stack initializer
@@ -16,7 +16,7 @@ void initialize(Stack *stack) {
 //push values into the stack
 void push(Stack *stack, int value) {
     if(stack->top_index >= MAX_STACK_SIZE - 1) {
-        printf("Stack overflow\n");
+        printf(RED "Stack overflow\n" RESET);
         return;
     }
     stack->elements[++stack->top_index] = value;
@@ -25,7 +25,7 @@ void push(Stack *stack, int value) {
 //pops values from the stack
 int pop(Stack *stack) {
     if(stack->top_index == -1) {
-        printf("Stack underflow\n");
+        printf(RED "Stack underflow\n" RESET);
         return -1;
     } else {
         return stack->elements[stack->top_index--];
@@ -35,7 +35,7 @@ int pop(Stack *stack) {
 //peek value
 int peek(Stack *stack) {
     if(stack->top_index == -1) {
-        printf("Stack underflow\n");
+        printf(RED "Stack underflow\n" RESET);
         return -1;
     } else {
         return stack->elements[stack->top_index];
@@ -45,20 +45,20 @@ int peek(Stack *stack) {
 //prints the stack
 void print(Stack *stack) {
     if(stack->top_index == -1) {
-        printf("Stack is empty\n");
+        printf(YELLOW "Stack is empty\n" RESET);
         return;
     }
     
-    printf("Bottom->Top: ");
+    printf(GREEN "Bottom->Top: " RESET);
     for(int i = 0; i <= stack->top_index; i++) 
-        printf("%d ", stack->elements[i]);
+        printf(CYAN "%d " RESET, stack->elements[i]);
     printf("\n");
 }
 
 //swaps the top elements
 void swap_top(Stack *stack) {
     if(stack->top_index < 1) {
-        printf("Not enough elements to swap\n");
+        printf(YELLOW "Not enough elements to swap\n" RESET); 
         return;
     }
     
@@ -66,7 +66,7 @@ void swap_top(Stack *stack) {
     stack->elements[stack->top_index] = stack->elements[stack->top_index - 1];
     stack->elements[stack->top_index - 1] = temp;
     
-    printf("Swapped: %d and %d\n", 
+    printf(GREEN "Swapped: %d and %d\n" RESET, 
            stack->elements[stack->top_index], 
            stack->elements[stack->top_index - 1]);
 }
@@ -98,7 +98,7 @@ void sort(Stack *stack, int start, int end) {
 //deletes values
 void delete_(Stack *stack, int value) {
     if(stack->top_index == -1) {
-        printf("Stack is empty\n");
+        printf(YELLOW "Stack is empty\n" RESET);
         return;
     }
 
@@ -111,7 +111,7 @@ void delete_(Stack *stack, int value) {
     }
 
     if(found_index == -1) {
-        printf("Value %d not found\n", value);
+        printf(YELLOW "Value %d not found\n" RESET, value);
         return;
     }
 
@@ -123,7 +123,7 @@ void delete_(Stack *stack, int value) {
 //find the index of a value 0 based index
 void search(Stack *stack, int value) {
     if(stack->top_index == -1) {
-        printf("Stack is empty\n");
+        printf(YELLOW "Stack is empty\n" RESET);
         return;
     }
 
@@ -135,16 +135,16 @@ void search(Stack *stack, int value) {
     }
 
     if(found_index == -1) {
-        printf("Value %d not found\n", value);
+        printf(YELLOW "Value %d not found\n" RESET, value);
     } else {
-        printf("Value %d found at index: %d\n", value, found_index);
+        printf(GREEN "Value %d found at index: %d\n" RESET, value, found_index);
     }
 }
 
 //reverse the stack
 void reverse(Stack *stack) {
     if(stack->top_index == -1) {
-        printf("Stack is empty\n");
+        printf(YELLOW "Stack is empty\n" RESET);
         return;
     }
 
@@ -158,24 +158,24 @@ void reverse(Stack *stack) {
 //checks if you added the amount of arguments required
 int IsValid_arg(int parsed, int args) {
     if(parsed == args) {return 1;}
-    printf("Error: Invalid arguments\n");
+    printf(RED "Error: Invalid arguments\n" RESET);
     return 0;
 }
 
 //prints the commands
 void help_menu() {
-    printf("\nAvailable commands:\n");
-    printf("  push <value>  - Add value to stack\n");
-    printf("  pop           - Remove top value\n");
-    printf("  peek          - View top value\n");
-    printf("  del <value>   - Delete specific value\n");
-    printf("  count         - Show element count\n");
-    printf("  swap          - Swap top two elements\n");
-    printf("  reverse       - Reverse stack order\n");
-    printf("  print         - Display stack contents\n");
-    printf("  sort          - Sort stack\n");
-    printf("  find <value>  - Search for value\n");
-    printf("  help          - Show this menu\n");
-    printf("  cls           - Clear screen\n");
-    printf("  exit          - Quit program\n\n");
+    printf(MAGENTA "\nAvailable commands:\n" RESET);
+    printf(MAGENTA "  push <value>  - Add value to stack\n" RESET);
+    printf(MAGENTA "  pop           - Remove top value\n" RESET);
+    printf(MAGENTA "  peek          - View top value\n" RESET);
+    printf(MAGENTA "  del <value>   - Delete specific value\n" RESET);
+    printf(MAGENTA "  count         - Show element count\n" RESET);
+    printf(MAGENTA "  swap          - Swap top two elements\n" RESET);
+    printf(MAGENTA "  reverse       - Reverse stack order\n" RESET);
+    printf(MAGENTA "  print         - Display stack contents\n" RESET);
+    printf(MAGENTA "  sort          - Sort stack\n" RESET);
+    printf(MAGENTA "  find <value>  - Search for value\n" RESET);
+    printf(MAGENTA "  help          - Show this menu\n" RESET);
+    printf(MAGENTA "  cls           - Clear screen\n" RESET);
+    printf(MAGENTA "  exit          - Quit program\n\n" RESET);
 }

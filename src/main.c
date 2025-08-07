@@ -12,7 +12,7 @@ int main() {
     int value;
 
     while(1) {
-        printf("Prompt@~> "); //getting input
+        printf(CYAN "Prompt@~> " RESET); //getting input
         if(fgets(user_input, sizeof(user_input), stdin) == NULL) {
             printf("Input error\n");
             continue;
@@ -25,17 +25,17 @@ int main() {
         if(strcmp(command, "push") == 0) { //push
             if(IsValid_arg(args_parsed, 2)) {
                 push(&my_stack, value);
-                printf("Pushed: %d\n", value);
+                printf(GREEN "Pushed: %d\n" RESET, value);
             }
         }
         else if(strcmp(command, "pop") == 0) { //pop
             if(IsValid_arg(args_parsed, 1)) {
-                printf("Popped: %d\n",pop(&my_stack));
+                printf(GREEN "Popped: %d\n" RESET,pop(&my_stack));
             }
         }
         else if(strcmp(command, "peek") == 0) { //peek
             if(IsValid_arg(args_parsed, 1)) {
-                printf("Top element: %d\n",peek(&my_stack));
+                printf(GREEN "Top element: %d\n" RESET,peek(&my_stack));
             }
         }
         else if(strcmp(command, "print") == 0) { //print
@@ -56,19 +56,19 @@ int main() {
         else if(strcmp(command, "sort") == 0) { //sort
             if(IsValid_arg(args_parsed, 1)) {
                 sort(&my_stack, 0, my_stack.top_index);
-                printf("Stack is now sorted\n");
+                printf(GREEN "Stack is now sorted\n" RESET);
             }
         }
         else if(strcmp(command, "reverse") == 0) { //reverse
             if(IsValid_arg(args_parsed, 1)) {
                 reverse(&my_stack);
-                printf("Stack is now reversed\n");
+                printf(GREEN "Stack is now reversed\n" RESET);
             }
         }
         else if(strcmp(command, "del") == 0) { //del
             if(IsValid_arg(args_parsed, 2)) { 
                 delete_(&my_stack, value);
-                printf("Deleted: %d\n",value);
+                printf(GREEN "Deleted: %d\n" RESET,value);
             }
         }
         else if(strcmp(command, "find") == 0) { //find
@@ -88,13 +88,13 @@ int main() {
         }
         else if(strcmp(command, "exit") == 0) { //exit
             if(IsValid_arg(args_parsed, 1)) {
-                printf("Exiting...\n"); 
+                printf(RED "Exiting...\n" RESET); 
                 break;
             }
         }
         else {
-            printf("Unknown command: '%s'\n", command);
-            printf("Type 'help' for available commands\n");
+            printf(RED "Unknown command: '%s'\n" RESET, command);
+            printf(RED "Type 'help' for available commands\n" RESET);
         }
     }
 
