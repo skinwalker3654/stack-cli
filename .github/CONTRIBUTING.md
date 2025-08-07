@@ -21,5 +21,5 @@ Thanks for thinking to help me upgrade this project
 
 ## Code rules
 - we follow the projects coding style
-- we writing code without warnings
-- and writing clean commit messages
+- we write code without warnings
+- we write clean commit messages
