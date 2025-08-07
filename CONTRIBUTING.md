@@ -20,6 +20,6 @@ Thanks for thinking to upgrade my project
 ---
 
 ## Code rules
-- we follow the projects codin style
-- writing code without wornigs
-- clean commit messages
+- we follow the projects coding style
+- we writing code without warnings
+- and writing clean commit messages
