@@ -1,4 +1,4 @@
-This program is a stakc-cli tool
+This program is a stack-cli tool
 that has the stack data structure
 in a cli form.
 
