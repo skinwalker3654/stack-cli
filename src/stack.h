@@ -3,7 +3,6 @@
 
 //change the 100 if you want a new size
 #define MAX_STACK_SIZE 100
-
 typedef struct {
     int elements[MAX_STACK_SIZE];
     int top_index;
