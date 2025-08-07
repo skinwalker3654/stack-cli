@@ -8,6 +8,7 @@ typedef struct {
     int top_index;
 } Stack;
 
+//functions
 void count_elements(Stack *stack);
 void initialize(Stack *stack);
 void push(Stack *stack, int value);
