@@ -66,7 +66,6 @@ void swap_top(Stack *stack) {
 
 void sort(Stack *stack, int start, int end) {
     if(start >= end) return;
-    
     int pivot = stack->elements[end];
     int partition_index = start - 1;
 
