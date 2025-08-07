@@ -164,18 +164,18 @@ int IsValid_arg(int parsed, int args) {
 
 //prints the commands
 void help_menu() {
-    printf(MAGENTA "\nAvailable commands:\n" RESET);
-    printf(MAGENTA "  push <value>  - Add value to stack\n" RESET);
-    printf(MAGENTA "  pop           - Remove top value\n" RESET);
-    printf(MAGENTA "  peek          - View top value\n" RESET);
-    printf(MAGENTA "  del <value>   - Delete specific value\n" RESET);
-    printf(MAGENTA "  count         - Show element count\n" RESET);
-    printf(MAGENTA "  swap          - Swap top two elements\n" RESET);
-    printf(MAGENTA "  reverse       - Reverse stack order\n" RESET);
-    printf(MAGENTA "  print         - Display stack contents\n" RESET);
-    printf(MAGENTA "  sort          - Sort stack\n" RESET);
-    printf(MAGENTA "  find <value>  - Search for value\n" RESET);
-    printf(MAGENTA "  help          - Show this menu\n" RESET);
-    printf(MAGENTA "  cls           - Clear screen\n" RESET);
-    printf(MAGENTA "  exit          - Quit program\n\n" RESET);
+    printf(LIGHT_GREEN "\nAvailable commands:\n" RESET);
+    printf(LIGHT_GREEN "  push <value>  - Add value to stack\n" RESET);
+    printf(LIGHT_GREEN "  pop           - Remove top value\n" RESET);
+    printf(LIGHT_GREEN "  peek          - View top value\n" RESET);
+    printf(LIGHT_GREEN "  del <value>   - Delete specific value\n" RESET);
+    printf(LIGHT_GREEN "  count         - Show element count\n" RESET);
+    printf(LIGHT_GREEN "  swap          - Swap top two elements\n" RESET);
+    printf(LIGHT_GREEN "  reverse       - Reverse stack order\n" RESET);
+    printf(LIGHT_GREEN "  print         - Display stack contents\n" RESET);
+    printf(LIGHT_GREEN "  sort          - Sort stack\n" RESET);
+    printf(LIGHT_GREEN "  find <value>  - Search for value\n" RESET);
+    printf(LIGHT_GREEN "  help          - Show this menu\n" RESET);
+    printf(LIGHT_GREEN "  cls           - Clear screen\n" RESET);
+    printf(LIGHT_GREEN "  exit          - Quit program\n\n" RESET);
 }
