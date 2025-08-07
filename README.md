@@ -85,6 +85,7 @@ prompt@~> exit
 |    ├── stack.c
 |    └── stack.h
 |
+├── CONTRIBUTING.md
 ├── README.md
 ├── Makefile
 └── LICENSE
