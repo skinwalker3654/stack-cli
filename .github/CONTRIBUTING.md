@@ -1,6 +1,6 @@
 # Contributing Guide
 
-Thanks for thinking to upgrade my project
+Thanks for thinking to help me upgrade this project
 
 ## How to start
 
