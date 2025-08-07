@@ -22,17 +22,19 @@ void push(Stack *stack, int value) {
 int pop(Stack *stack) {
     if(stack->top_index == -1) {
         printf("Stack underflow\n");
-        exit(EXIT_FAILURE);
+        return -1;
+    } else {
+        return stack->elements[stack->top_index--];
     }
-    return stack->elements[stack->top_index--];
 }
 
 int peek(Stack *stack) {
     if(stack->top_index == -1) {
         printf("Stack underflow\n");
-        exit(EXIT_FAILURE);
+        return -1;
+    } else {
+        return stack->elements[stack->top_index];
     }
-    return stack->elements[stack->top_index];
 }
 
 void print(Stack *stack) {
