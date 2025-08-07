@@ -87,7 +87,7 @@ void sort(Stack *stack, int start, int end) {
     stack_sort(stack, pivot_index + 1, end);
 }
 
-void delete(Stack *stack, int value) {
+void delete_(Stack *stack, int value) {
     if(stack->top_index == -1) {
         printf("Stack is empty\n");
         return;
