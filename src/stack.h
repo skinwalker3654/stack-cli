@@ -1,6 +1,7 @@
 #ifndef STACK_H
 #define STACK_H
 
+//change the 100 if you want a new size
 #define MAX_STACK_SIZE 100
 
 typedef struct {
