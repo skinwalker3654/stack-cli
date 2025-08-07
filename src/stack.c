@@ -83,8 +83,8 @@ void sort(Stack *stack, int start, int end) {
     stack->elements[end] = temp;
 
     int pivot_index = partition_index + 1;
-    stack_sort(stack, start, pivot_index - 1);
-    stack_sort(stack, pivot_index + 1, end);
+    sort(stack, start, pivot_index - 1);
+    sort(stack, pivot_index + 1, end);
 }
 
 void delete_(Stack *stack, int value) {
