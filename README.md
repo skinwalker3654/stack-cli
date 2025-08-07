@@ -94,10 +94,9 @@ prompt@~> exit
 
 ## 📣 Notes
 
-- The stack is fixed-size (`max_nums = 100`)
+- The stack is fixed-size (`max_nums = 100`) you can change the size by changing the #define MAX_STACK_SIZE 
 - Sorting uses quicksort
 - The `swap` command swaps the top 2 elements (if available)
-- Trying to `pop` or `peek` from an empty stack exits the program ( as a warning ⚠️  )
 
 ---
 
