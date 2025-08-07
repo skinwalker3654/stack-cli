@@ -49,7 +49,7 @@ void print(Stack *stack) {
         return;
     }
     
-    printf("bottom->top: ");
+    printf("Bottom->Top: ");
     for(int i = 0; i <= stack->top_index; i++) 
         printf("%d ", stack->elements[i]);
     printf("\n");
