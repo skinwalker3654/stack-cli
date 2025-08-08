@@ -56,20 +56,7 @@ Run it in your terminal:
 ```bash
 ./bin/main
 ```
-
-Once inside, try commands like:
-
-```bash
-Prompt@~> push 5
-Prompt@~> push 10
-Prompt@~> peek
-Prompt@~> find 10
-Prompt@~> sort
-Prompt@~> print
-Prompt@~> pop
-Prompt@~> help
-Prompt@~> exit
-```
+![My Pic][.github/image.png]
 
 ---
 
