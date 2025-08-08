@@ -22,7 +22,7 @@ Welcome to the **Stack CLI**, a fun and interactive command-line stack implement
   - `cls` (clears terminal)
   - `help` (shows command list)
   - `exit`
-
+  
 ---
 
 ## 🛠️ Build Instructions
