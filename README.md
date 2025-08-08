@@ -56,8 +56,7 @@ Run it in your terminal:
 ```bash
 ./bin/main
 ```
-![Logo][logo-image]
-[logo-image]: .github/image.png
+![] (.github/image.png)
 
 ---
 
