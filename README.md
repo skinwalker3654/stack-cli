@@ -1,6 +1,6 @@
 # 🌀 Stack CLI Manager (C)
 
-Welcome to the **Stack CLI**, a fun and interactive command-line stack implementation written entirely in C. This project supports a bunch of operations like `push`, `pop`, `find`, `sort`, and more — all from your terminal. Perfect for C learners who wanna sharpen their data structure skills with a lil' spice 🌶️.
+Welcome to the **Stack CLI**, a fun and interactive command-line stack implementation written entirely in C. This project supports a bunch of operations like `push`, `pop`, `find`, `sort`, and more — all from your terminal. Perfect for C learners who wanna sharpen their data structure skills with a lil' spice.
 
 ---
 
