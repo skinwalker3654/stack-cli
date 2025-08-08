@@ -14,8 +14,8 @@ int main() {
     while(1) {
         printf(CYAN "Prompt@~> " RESET); //getting input
         if(fgets(user_input, sizeof(user_input), stdin) == NULL) {
-            printf("Input error\n");
-            continue;
+                printf("Input error\n");
+                continue;
         }
 
         user_input[strcspn(user_input, "\n")] = '\0'; 
@@ -24,70 +24,70 @@ int main() {
 
         if(strcmp(command, "push") == 0) { //push
             if(IsValid_arg(args_parsed, 2)) {
-                push(&my_stack, value);
-                printf(GREEN "Pushed: %d\n" RESET, value);
+                    push(&my_stack, value);
+                    printf(GREEN "Pushed: %d\n" RESET, value);
             }
         }
         else if(strcmp(command, "pop") == 0) { //pop
             if(IsValid_arg(args_parsed, 1)) {
-                pop(&my_stack);
+                    pop(&my_stack);
             }
         }
         else if(strcmp(command, "peek") == 0) { //peek
             if(IsValid_arg(args_parsed, 1)) {
-                peek(&my_stack);
+                    peek(&my_stack);
             }
         }
         else if(strcmp(command, "print") == 0) { //print
             if(IsValid_arg(args_parsed, 1)) {
-                print(&my_stack);
+                    print(&my_stack);
             }
         }
         else if(strcmp(command, "count") == 0) { //count
             if(IsValid_arg(args_parsed, 1)) {
-                count_elements(&my_stack);
+                    count_elements(&my_stack);
             }
         }
         else if(strcmp(command, "swap") == 0) { //swap
             if(IsValid_arg(args_parsed, 1)) {
-                swap_top(&my_stack);
+                    swap_top(&my_stack);
             }
         }
         else if(strcmp(command, "sort") == 0) { //sort
             if(IsValid_arg(args_parsed, 1)) {
-                sort(&my_stack, 0, my_stack.top_index);
-                printf(GREEN "Stack is now sorted\n" RESET);
+                    sort(&my_stack, 0, my_stack.top_index);
+                    printf(GREEN "Stack is now sorted\n" RESET);
             }
         }
         else if(strcmp(command, "reverse") == 0) { //reverse
             if(IsValid_arg(args_parsed, 1)) {
-                reverse(&my_stack);
+                    reverse(&my_stack);
             }
         }
         else if(strcmp(command, "del") == 0) { //del
             if(IsValid_arg(args_parsed, 2)) { 
-                delete_(&my_stack, value);
+                    delete_(&my_stack, value);
             }
         }
         else if(strcmp(command, "find") == 0) { //find
             if(IsValid_arg(args_parsed, 2)) {
-                search(&my_stack,value);
+                    search(&my_stack,value);
             }
         }
         else if(strcmp(command, "help") == 0) { //help
             if(IsValid_arg(args_parsed, 1)) {
-                help_menu();
+                    help_menu();
             }
         }
         else if(strcmp(command, "cls") == 0) { //cls
             if(IsValid_arg(args_parsed, 1)) {
-                system("clear"); 
+                    system("clear"); 
             }
         }
         else if(strcmp(command, "exit") == 0) { //exit
             if(IsValid_arg(args_parsed, 1)) {
-                printf(RED "Exiting...\n" RESET); 
-                break;
+                    printf(RED "Exiting...\n" RESET); 
+                    break;
             }
         }
         else {
