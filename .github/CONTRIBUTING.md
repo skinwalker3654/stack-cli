@@ -11,10 +11,10 @@ Thanks for thinking to help me upgrade this project
    ```
 3. Do the code changes
 4. Commit and push the code
-  ```bash
-  git commit -m "description"
-  git push origin my_feature
-  ```
+   ```bash
+   git commit -m "description"
+   git push origin my_feature
+   ```
 5. Open pull request on the main repo
 
 ---
