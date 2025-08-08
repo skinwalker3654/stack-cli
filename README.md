@@ -56,6 +56,8 @@ Run it in your terminal:
 ```bash
 ./bin/main
 ```
+---
+## Screenshot of the program
 ![alt text](https://github.com/skinwalker3654/stack-cli/blob/main/.github/image.png?raw=true)
 
 ---
