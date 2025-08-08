@@ -56,7 +56,7 @@ Run it in your terminal:
 ```bash
 ./bin/main
 ```
-![alt text](https://github.com/skinwalker3654/stack-cli/blob/main/image.png?raw=true)
+![alt text](https://github.com/skinwalker3654/stack-cli/blob/main/.github/image.png?raw=true)
 
 ---
 
