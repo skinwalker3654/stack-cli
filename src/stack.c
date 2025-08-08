@@ -23,22 +23,24 @@ void push(Stack *stack, int value) {
 }
 
 //pops values from the stack
-int pop(Stack *stack) {
+void pop(Stack *stack) {
     if(stack->top_index == -1) {
         printf(RED "Stack underflow\n" RESET);
-        return -1;
+        return;
     } else {
-        return stack->elements[stack->top_index--];
+        printf(GREEN "Popped: %d\n" RESET,stack->elements[stack->top_index--]);
+        return;
     }
 }
 
 //peek value
-int peek(Stack *stack) {
+void peek(Stack *stack) {
     if(stack->top_index == -1) {
         printf(RED "Stack underflow\n" RESET);
-        return -1;
+        return;
     } else {
-        return stack->elements[stack->top_index];
+        printf(GREEN "Top element: %d\n" RESET,stack->elements[stack->top_index]);
+        return;
     }
 }
 
@@ -118,6 +120,7 @@ void delete_(Stack *stack, int value) {
     for(int i = found_index; i < stack->top_index; i++) 
         stack->elements[i] = stack->elements[i + 1];
     stack->top_index--;
+    printf(GREEN "Deleted: %d\n" RESET,value);
 }
 
 //find the index of a value 0 based index
@@ -153,6 +156,7 @@ void reverse(Stack *stack) {
         stack->elements[i] = stack->elements[stack->top_index - i];
         stack->elements[stack->top_index - i] = temp;
     }
+    printf(GREEN "Stack is now reversed\n" RESET);
 }
 
 //checks if you added the amount of arguments required

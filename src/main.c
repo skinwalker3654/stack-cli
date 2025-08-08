@@ -30,12 +30,12 @@ int main() {
         }
         else if(strcmp(command, "pop") == 0) { //pop
             if(IsValid_arg(args_parsed, 1)) {
-                printf(GREEN "Popped: %d\n" RESET,pop(&my_stack));
+                pop(&my_stack);
             }
         }
         else if(strcmp(command, "peek") == 0) { //peek
             if(IsValid_arg(args_parsed, 1)) {
-                printf(GREEN "Top element: %d\n" RESET,peek(&my_stack));
+                peek(&my_stack);
             }
         }
         else if(strcmp(command, "print") == 0) { //print
@@ -62,13 +62,11 @@ int main() {
         else if(strcmp(command, "reverse") == 0) { //reverse
             if(IsValid_arg(args_parsed, 1)) {
                 reverse(&my_stack);
-                printf(GREEN "Stack is now reversed\n" RESET);
             }
         }
         else if(strcmp(command, "del") == 0) { //del
             if(IsValid_arg(args_parsed, 2)) { 
                 delete_(&my_stack, value);
-                printf(GREEN "Deleted: %d\n" RESET,value);
             }
         }
         else if(strcmp(command, "find") == 0) { //find

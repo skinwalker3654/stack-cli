@@ -12,8 +12,8 @@ typedef struct {
 void count_elements(Stack *stack);
 void initialize(Stack *stack);
 void push(Stack *stack, int value);
-int pop(Stack *stack);
-int peek(Stack *stack);
+void pop(Stack *stack);
+void peek(Stack *stack);
 void print(Stack *stack);
 void swap_top(Stack *stack);
 void reverse(Stack *stack);
