@@ -56,7 +56,7 @@ Run it in your terminal:
 ```bash
 ./bin/main
 ```
-![My Pic][.github/image.png]
+![My Image][.github/image.png]
 
 ---
 
