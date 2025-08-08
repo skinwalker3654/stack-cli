@@ -45,7 +45,7 @@ When you want to delete the executable file run:
 make clean
 ```
 
-> ✅ You must have all three files: `main.c`, `stack.c`, and `stack.h`
+✅ You must have all three files: `main.c`, `stack.c`, and `stack.h`
 
 ---
 
