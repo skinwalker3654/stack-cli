@@ -78,6 +78,7 @@ Prompt@~> exit
 ```
 📂 stack-cli
 ├── .github/
+|    ├── image.png
 |    └── CONTRIBUTING.md
 |
 ├── explanation/
