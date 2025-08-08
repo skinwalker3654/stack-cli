@@ -91,8 +91,6 @@ Run it in your terminal:
 - Sorting uses quicksort
 - The `swap` command swaps the top 2 elements (if available)
 
----
-
 ## 💡 Why?
 
 This project is great for:
@@ -101,14 +99,10 @@ This project is great for:
 - Learning CLI parsing with `sscanf` and `fgets`
 - Getting comfy with stack operations in a low-level language
 
----
-
 ## 🧠 Inspired By
 
 Just the vibes of coding raw C like a boss 😎
 Ideal for beginners, students, or anyone trying to flex with terminal tools.
-
----
 
 ## 📜 License
 
