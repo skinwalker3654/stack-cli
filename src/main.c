@@ -25,7 +25,6 @@ int main() {
         if(strcmp(command, "push") == 0) { //push
             if(IsValid_arg(args_parsed, 2)) {
                     push(&my_stack, value);
-                    printf(GREEN "Pushed: %d\n" RESET, value);
             }
         }
         else if(strcmp(command, "pop") == 0) { //pop

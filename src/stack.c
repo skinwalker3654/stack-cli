@@ -15,11 +15,25 @@ void initialize(Stack *stack) {
 
 //push values into the stack
 void push(Stack *stack, int value) {
-    if(stack->top_index >= MAX_STACK_SIZE - 1) {
-            printf(RED "Stack overflow\n" RESET);
+    int found = 0;
+    for(int i=0; i<stack->top_index+1; i++) {
+        if(value == stack->elements[i]) {
+                found = 1;
+                break;
+        }
+    }
+
+    if(!found) {
+        if(stack->top_index >= MAX_STACK_SIZE - 1) {
+                printf(RED "Stack overflow\n" RESET);
+                return;
+        }
+        stack->elements[++stack->top_index] = value; 
+        printf(GREEN "Pushed: %d\n" RESET, value);
+    } else {
+            printf(RED "Error: The value %d already exists\n" RESET,value);
             return;
     }
-    stack->elements[++stack->top_index] = value;
 }
 
 //pops values from the stack
