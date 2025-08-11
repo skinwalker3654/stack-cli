@@ -172,6 +172,7 @@ void reverse(Stack *stack) {
             stack->elements[i] = stack->elements[stack->top_index - i];
             stack->elements[stack->top_index - i] = temp;
     }
+
     printf(GREEN "Stack is now reversed\n" RESET);
 }
 
