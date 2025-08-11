@@ -32,3 +32,8 @@ Bottom->Top: 10 30
 Prompt@~> exit
 Exiting...
 
+NOTES:
+    you cant push the same value 2 times
+    the swap command swaps the top 2 values
+    the find command finds the index of the value in 0 based index rule
+    sort uses quicksort to sort the elements
