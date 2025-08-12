@@ -34,7 +34,7 @@ Make sure you have a C compiler and makefile tools from gnu.
 git clone git@github.com:skinwalker3654/stack-cli.git  #ssh key required
 cd stack-cli
 ```
-2. compile the program
+2. compile and run the program
 ```bash
 make
 make run
