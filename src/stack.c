@@ -31,7 +31,7 @@ void push(Stack *stack, int value) {
         stack->elements[++stack->top_index] = value; 
         printf(GREEN "Pushed: %d\n" RESET, value);
     } else {
-            printf(RED "Error: The value %d already exists\n" RESET,value);
+            printf(YELLOW "Error: The value %d already exists\n" RESET,value);
             return;
     }
 }
