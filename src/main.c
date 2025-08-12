@@ -26,72 +26,91 @@ int main() {
             if(IsValid_arg(args_parsed, 2)) {
                     push(&my_stack, value);
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "pop") == 0) { //pop
             if(IsValid_arg(args_parsed, 1)) {
                     pop(&my_stack);
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "peek") == 0) { //peek
             if(IsValid_arg(args_parsed, 1)) {
                     peek(&my_stack);
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "print") == 0) { //print
             if(IsValid_arg(args_parsed, 1)) {
                     print(&my_stack);
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "count") == 0) { //count
             if(IsValid_arg(args_parsed, 1)) {
                     count_elements(&my_stack);
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "swap") == 0) { //swap
             if(IsValid_arg(args_parsed, 1)) {
                     swap_top(&my_stack);
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "sort") == 0) { //sort
             if(IsValid_arg(args_parsed, 1)) {
                     sort(&my_stack, 0, my_stack.top_index);
                     printf(GREEN "Stack is now sorted\n" RESET);
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "reverse") == 0) { //reverse
             if(IsValid_arg(args_parsed, 1)) {
                     reverse(&my_stack);
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "del") == 0) { //del
             if(IsValid_arg(args_parsed, 2)) { 
                     delete_(&my_stack, value);
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "find") == 0) { //find
             if(IsValid_arg(args_parsed, 2)) {
                     search(&my_stack,value);
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "help") == 0) { //help
             if(IsValid_arg(args_parsed, 1)) {
                     help_menu();
+            }
+            save_history(user_input);
+        }
+        else if(strcmp(command,"history") == 0) { //history
+            if(IsValid_arg(args_parsed, 1)) {
+                    print_history();
             }
         }
         else if(strcmp(command, "cls") == 0) { //cls
             if(IsValid_arg(args_parsed, 1)) {
                     system("clear"); 
             }
+            save_history(user_input);
         }
         else if(strcmp(command, "exit") == 0) { //exit
             if(IsValid_arg(args_parsed, 1)) {
                     printf(RED "Exiting...\n" RESET); 
                     break;
             }
+            save_history(user_input);
         }
         else {
             printf(RED "Unknown command: '%s'\n" RESET, command);
             printf(RED "Type 'help' for available commands\n" RESET);
+            save_history(user_input);
         }
     }
 

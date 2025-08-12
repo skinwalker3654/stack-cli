@@ -176,6 +176,35 @@ void reverse(Stack *stack) {
     printf(GREEN "Stack is now reversed\n" RESET);
 }
 
+//save the comand into the history.txt
+void save_history(char *input) {
+    FILE *file = fopen(FILE_NAME,"a");
+    if(!file) {
+            printf(RED "Error: Failed to open the file\n" RESET);
+            return;
+    }
+
+    fprintf(file,"%s\n",input);
+    fclose(file);
+}
+
+//print the command history
+void print_history(void) {
+    FILE *file = fopen(FILE_NAME,"r");
+    if(!file) {
+        printf(RED "Error: Failed to open the file\n" RESET);
+        return;
+    }
+
+    char line[100];
+    printf("\nHISTORY:\n");
+    while(fgets(line,sizeof(line),file)) 
+            printf("%s",line);
+
+    printf("\n");
+    fclose(file);
+}
+
 //checks if you added the amount of arguments required
 int IsValid_arg(int parsed, int args) {
         if(parsed == args) {return 1;}
@@ -193,6 +222,7 @@ void help_menu() {
         printf(LIGHT_GREEN "  peek          - View top value\n" RESET);
         printf(LIGHT_GREEN "  count         - Show element count\n" RESET);
         printf(LIGHT_GREEN "  swap          - Swap top two elements\n" RESET);
+        printf(LIGHT_GREEN "  history       - print command history\n" RESET);
         printf(LIGHT_GREEN "  reverse       - Reverse stack order\n" RESET);
         printf(LIGHT_GREEN "  print         - Display stack contents\n" RESET);
         printf(LIGHT_GREEN "  sort          - Sort stack\n" RESET);

@@ -16,6 +16,7 @@ all: $(TARGET)
 $(TARGET): $(SRC_FILES)
 	@echo "compiling the program..."
 	@mkdir -p $(BIN_DIR)
+	@touch bin/history.txt
 	$(CC) $^ -o $@
 
 #runs the program

@@ -8,6 +8,9 @@ typedef struct {
     int top_index;
 } Stack;
 
+//the file location of the command hisory
+#define FILE_NAME "bin/history.txt"
+
 //functions
 void count_elements(Stack *stack);
 void initialize(Stack *stack);
@@ -21,6 +24,8 @@ void sort(Stack *stack, int start, int end);
 void delete_(Stack *stack, int value);
 void search(Stack *stack, int value);
 void help_menu(void);
+void save_history(char *input);
+void print_history(void);
 int IsValid_arg(int parsed, int args);
 
 //colors

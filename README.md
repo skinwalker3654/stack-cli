@@ -70,6 +70,10 @@ Run it in your terminal:
 |    ├── image.png
 |    └── CONTRIBUTING.md
 |
+├── bin/ 
+|    ├── main  #executable file
+|    └── history.txt  #contains the command history
+|
 ├── explanation/
 |    └── explain.txt
 |
