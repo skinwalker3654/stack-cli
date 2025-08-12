@@ -20,6 +20,8 @@ commands:
     cls              #this commands clears the terminal.
     exit             #this commands is for exiting the program.
 
+-----------------------------------------
+
 Here is an example of the 
 program running:
 
@@ -31,6 +33,8 @@ Prompt@~> print
 Bottom->Top: 10 30
 Prompt@~> exit
 Exiting...
+
+-----------------------------------------
 
 NOTES:
     you cant push the same value 2 times
