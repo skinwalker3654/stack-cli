@@ -59,7 +59,7 @@ Run it in your terminal:
 ---
 ## Screenshot of the program
 ### dark_theme:
-![alt text](https://github.com/skinwalker3654/stack-cli/blob/main/.github/dakr_image.png?raw=true)
+![alt text](https://github.com/skinwalker3654/stack-cli/blob/main/.github/dark_image.png?raw=true)
 
 ### light_theme:
 ![alt text](https://github.com/skinwalker3654/stack-cli/blob/main/.github/light_image.png?raw=true)
