@@ -58,7 +58,11 @@ Run it in your terminal:
 ```
 ---
 ## Screenshot of the program
-![alt text](https://github.com/skinwalker3654/stack-cli/blob/main/.github/image.png?raw=true)
+### dark_theme:
+![alt text](https://github.com/skinwalker3654/stack-cli/blob/main/.github/dakr_image.png?raw=true)
+
+### light_theme:
+![alt text](https://github.com/skinwalker3654/stack-cli/blob/main/.github/light_image.png?raw=true)
 
 ---
 
@@ -67,7 +71,8 @@ Run it in your terminal:
 ```
 📂 stack-cli
 ├── .github/
-|    ├── image.png
+|    ├── dark_image.png
+|    ├── light_image.png
 |    └── CONTRIBUTING.md
 |
 ├── bin/ 
