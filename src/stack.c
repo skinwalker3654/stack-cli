@@ -134,8 +134,8 @@ void delete_(Stack *stack, int value) {
 
     for(int i = found_index; i < stack->top_index; i++) 
             stack->elements[i] = stack->elements[i + 1];
+        
     stack->top_index--;
-
     printf(GREEN "Deleted: %d\n" RESET,value);
 }
 
