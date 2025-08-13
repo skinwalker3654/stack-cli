@@ -99,6 +99,7 @@ Run it in your terminal:
 - The stack is fixed-size (`max_nums = 100`) you can change the size by changing the #define MAX_STACK_SIZE from the src/stack.h
 - Sorting uses quicksort
 - The `swap` command swaps the top 2 elements (if available)
+- The program colors are changing if you have a diffrent terminal theme
 
 ## 💡 Why?
 
