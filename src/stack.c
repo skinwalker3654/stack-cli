@@ -222,7 +222,7 @@ void help_menu() {
         printf(LIGHT_GREEN "  peek          - View top value\n" RESET);
         printf(LIGHT_GREEN "  count         - Show element count\n" RESET);
         printf(LIGHT_GREEN "  swap          - Swap top two elements\n" RESET);
-        printf(LIGHT_GREEN "  history       - print command history\n" RESET);
+        printf(LIGHT_GREEN "  history       - print commands history\n" RESET);
         printf(LIGHT_GREEN "  reverse       - Reverse stack order\n" RESET);
         printf(LIGHT_GREEN "  print         - Display stack contents\n" RESET);
         printf(LIGHT_GREEN "  sort          - Sort stack\n" RESET);
