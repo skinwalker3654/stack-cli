@@ -102,7 +102,7 @@ int main() {
         }
         else if(strcmp(command, "exit") == 0) { //exit
             if(IsValid_arg(args_parsed, 1)) {
-                    printf(RED "Exiting...\n" RESET); 
+                    printf(YELLOW "Exiting...\n" RESET); 
                     break;
             }
             save_history(user_input);
