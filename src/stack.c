@@ -199,7 +199,7 @@ void print_history(void) {
     char line[100];
     printf("\nHISTORY:\n");
     while(fgets(line,sizeof(line),file)) 
-            printf("%s",line);
+            printf("  %s",line);
 
     printf("\n");
     fclose(file);
