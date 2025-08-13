@@ -72,7 +72,7 @@ Run it in your terminal:
 |
 ├── bin/ 
 |    ├── main  #executable file
-|    └── history.txt  #contains the command history
+|    └── history.txt  #contains the commands history
 |
 ├── explanation/
 |    └── explain.txt
