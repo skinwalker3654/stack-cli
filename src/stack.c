@@ -177,6 +177,7 @@ void reverse(Stack *stack) {
 }
 
 //save the comand into the history.txt
+int count = 1;
 void save_history(char *input) {
     FILE *file = fopen(FILE_NAME,"a");
     if(!file) {
@@ -184,8 +185,9 @@ void save_history(char *input) {
             return;
     }
 
-    fprintf(file,"%s\n",input);
+    fprintf(file,"%d. %s\n",count,input);
     fclose(file);
+    count++;
 }
 
 //print the command history

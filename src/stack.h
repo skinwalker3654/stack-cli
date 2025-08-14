@@ -10,6 +10,7 @@ typedef struct {
 
 //the file location of the command hisory
 #define FILE_NAME "bin/history.txt"
+extern int count; //from stack.c 
 
 //functions
 void count_elements(Stack *stack);
