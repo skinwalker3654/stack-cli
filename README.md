@@ -12,10 +12,11 @@ Welcome to the **Stack CLI**, a fun and interactive command-line stack implement
   - `push <value>`
   - `pop`
   - `peek`
-  - `delete <value>`
+  - `del <value>`
   - `find <value>`
   - `count`
   - `swap`
+  - `history`
   - `sort`
   - `reverse`
   - `print`
