@@ -7,7 +7,7 @@
 
 void handler(int sig) {
     printf(YELLOW "\nClosing the program...\n" RESET);
-    sleep(1);
+    usleep(500000);
     exit(1);
 }
 
@@ -112,7 +112,7 @@ int main() {
         else if(strcmp(command, "exit") == 0) { //exit
             if(IsValid_arg(args_parsed, 1)) {
                     printf(YELLOW "Exiting...\n" RESET); 
-                    sleep(1);
+                    usleep(500000);
                     break;
             }
             save_history(user_input);
