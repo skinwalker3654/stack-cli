@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <signal.h>
+#include <unistd.h>
 #include "stack.h"
+
+void handler(int sig) {
+    printf(YELLOW "\nExiting...\n" RESET);
+    exit(1);
+}
 
 int main() {
     Stack my_stack;
@@ -12,6 +19,7 @@ int main() {
     int value;
 
     while(1) {
+        signal(SIGINT, handler);
         printf(CYAN "Prompt@~> " RESET); //getting input
         if(fgets(user_input, sizeof(user_input), stdin) == NULL) {
                 printf("Input error\n");
