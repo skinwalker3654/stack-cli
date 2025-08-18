@@ -27,7 +27,7 @@ void search(Stack *stack, int value);
 void help_menu(void);
 void save_history(char *input);
 void print_history(void);
-int IsValid_arg(int parsed, int args);
+int IsValid_Arg(int parsed, int args);
 
 //colors
 #define RESET        "\033[0m"

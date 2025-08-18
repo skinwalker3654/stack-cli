@@ -208,7 +208,7 @@ void print_history(void) {
 }
 
 //checks if you added the amount of arguments required
-int IsValid_arg(int parsed, int args) {
+int IsValid_Arg(int parsed, int args) {
         if(parsed == args) { return 1; }
         printf(RED "Error: Invalid arguments\n" RESET);
         return 0;
