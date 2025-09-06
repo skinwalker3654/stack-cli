@@ -12,9 +12,13 @@ typedef struct {
 #define FILE_NAME "bin/history.txt"
 extern int count; //from stack.c 
 
+//utils
+int IsValid_Arg(int parsed, int args);
+void initialize(Stack *stack);
+void help_menu(void);
+
 //functions
 void count_elements(Stack *stack);
-void initialize(Stack *stack);
 void push(Stack *stack, int value);
 void pop(Stack *stack);
 void peek(Stack *stack);
@@ -24,10 +28,8 @@ void reverse(Stack *stack);
 void sort(Stack *stack, int start, int end);
 void delete_(Stack *stack, int value);
 void search(Stack *stack, int value);
-void help_menu(void);
 void save_history(char *input);
 void print_history(void);
-int IsValid_Arg(int parsed, int args);
 
 //colors
 #define RESET        "\033[0m"
