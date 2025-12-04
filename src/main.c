@@ -112,7 +112,6 @@ int main() {
         else if(strcmp(command, "exit") == 0) { //exit
             if(IsValid_Arg(args_parsed, 1)) {
                     printf(YELLOW "Exiting...\n" RESET); 
-                    usleep(500000);
                     break;
             }
             save_history(user_input);
